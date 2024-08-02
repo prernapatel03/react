@@ -1,0 +1,16 @@
+import { configureStore } from '@reduxjs/toolkit';
+import createSagaMiddleware from 'redux-saga';
+import watchFetchDataSaga from './MyApiSaga';
+import dataSlice from './MyApiSlice'
+const sagaMiddleware = createSagaMiddleware();
+
+const store = configureStore({
+  reducer: {
+    data: dataSlice,
+  },
+  middleware: (m)=>m({thunk : false}).concat(sagaMiddleware),
+});
+
+sagaMiddleware.run(watchFetchDataSaga);
+
+export default store;

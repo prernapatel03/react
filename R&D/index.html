@@ -1,0 +1,55 @@
+<html>
+<head>
+  <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.quilljs.com/1.3.7/quill.bubble.css"></link>
+  <link rel="stylesheet" type="text/css" href="https://cdn.quilljs.com/1.3.7/quill.snow.css"></link>
+  <script src="https://cdn.jsdelivr.net/gh/T-vK/DynamicQuillTools@master/DynamicQuillTools.js"></script>
+</head>
+<body>
+  <div id="editor"></div>
+  <script>
+    // Create a Quill Editor instance with some built-in toolbar tools
+    const quill = new Quill('#editor', {
+        theme: 'snow',
+        modules: {
+            toolbar: {
+                container: [
+                    ['bold', 'italic', 'underline', 'strike'],
+                    ['blockquote', 'code-block'],
+
+                    [{ 'header': 1 }, { 'header': 2 }],
+                    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                    [{ 'script': 'sub' }, { 'script': 'super' }],
+                    [{ 'indent': '-1' }, { 'indent': '+1' }],
+                    [{ 'direction': 'rtl' }],
+
+                    [{ 'size': ['small', false, 'large', 'huge'] }],
+                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+                    [{ 'color': [] }, { 'background': [] }],
+                    [{ 'font': [] }],
+                    [{ 'align': [] }],
+                    ['clean'],
+                ]
+            }
+        }
+    })
+
+    // Add a custom Button to the Quill Editor's toolbar:
+    const myButton = new QuillToolbarButton({
+    icon: `<svg viewBox="0 0 18 18"> <path class="ql-stroke" d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3"></path></svg>`
+    })
+   
+    myButton.onClick = function(quill) {
+        const { index, length } = quill.selection.savedRange
+        const selectedText = quill.getText(index, length)
+        const newText = selectedText.toUpperCase()
+        quill.deleteText(index, length)
+        quill.insertText(index, newText)
+        quill.setSelection(index, newText.length)
+    }
+    myButton.attach(quill)
+
+ </script>
+</body>
+</html>
