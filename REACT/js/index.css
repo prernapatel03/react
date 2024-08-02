@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  header {
+    height: 100px;
+    background-color: silver;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  
+  .body-text{
+      /* background-color: silver; */
+    
+  }
+  
+  .Add-data{
+      /* background-color: rgb(118, 118, 126); */
+      height: 120px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-right: 20px;
+      align-items: center;
+      padding: 20px 0;
+      
+  }
+  .sub-Add-data{
+      /* background-color: rgb(96, 96, 176); */
+      justify-items: space-between;
+      display: flex;
+      flex-direction: row;
+  }
+  .Add-data button{
+      background-color: green;
+      border: none;
+      outline: none;
+      padding: 15px 30px;
+      border-radius: 5px;
+      color: aliceblue;
+      font-size: 18px;
+  }
+  
+  .Add-data input{
+  
+      border: none;
+      outline: none;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-size: 18px;
+      margin-right: 10px;
+      background-color: silver;
+  
+  
+  }
+  
+  
+  
+  /* table */
+  .table{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      
+  }
+  table{
+  
+      width: 60%;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  table td ,th{
+      padding: 20px 10px;
+  }
+  
+  table tr td button{
+      background-color: red;
+      border: none;
+      outline: none;
+      padding: 10px 10px;
+      border-radius: 5px;
+      color: aliceblue;
+      font-size: 18px;
+  }
+  table tr td:last-child button{
+      background-color: green;
+  } 
+  
+  /* 
+  
+  */
+  
+  .form{
+      transition: 0.5s ease all;
+      background-color: bisque;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s */
+      
+  }
+  /* @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  } */
+  
+  form{
+     top: 20%;
+      position: absolute;
+      background-color: whitesmoke;
+      width: 30%;
+      padding: 0 90px;
+      border-radius: 5px; 
+      padding-top: 60px;
+  }
+  
+  form div{
+      margin: 20px 0;
+  }
+  form label{
+      margin-bottom: 10px;
+      display: block;
+      font-size: 20px;
+  }
+  form input{
+      width:90%;
+      padding: 10px 0;
+      border: none;
+      border-bottom: 1px solid black;
+      outline: none;
+      background-color: silver;
+  
+  }
+  form .gender{
+      display: flex;
+      font-size: 20px;
+  }
+  form .gender div{
+      margin-right: 20px;
+  }
+  form .gender .sub-gender{
+      display: flex;
+  }
+  form .gender .sub-gender label{
+      margin-right: 6px;
+  }
+  form .gender label{
+      display: inline-block;
+      align-items: center;
+      margin-bottom: 0;
+      font-size: 20px;
+  }
+  form #addButton button{
+      background-color: green;
+      border: none;
+      outline: none;
+      padding: 15px 30px;
+      border-radius: 5px;
+      color: aliceblue;
+      font-size: 18px;
+  }
+  #closeBtn{
+      color: red;
+      display: block;
+      text-align: end;
+  }

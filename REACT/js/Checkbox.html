@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+    <body>
+        <input type="checkbox" onclick="toggle()" id="mainInp" /> Select All<br />
+          <div>
+          <input type="checkbox" class="input" value="bar1" /> Bar 1<br />
+          <input type="checkbox" class="input" value="bar2" /> Bar 2<br />
+          <input type="checkbox" class="input" value="bar3" /> Bar 3<br />
+          <input type="checkbox" class="input" value="bar4" /> Bar 4<br />
+        </div>
+      </body>
+
+      <script>
+          const inputData = document.querySelectorAll('.input');
+
+          const mainCheak = document.getElementById('mainInp')
+          function toggle(){
+
+            for(let i =0;i<=inputData.length;i++){
+                 inputData[i].checked = mainCheak.checked
+            }
+
+        }
+            inputData.forEach((e , i , arr)=>{
+                 e.addEventListener('click' , ()=>{
+                    let x = [...arr]
+                     mainCheak.checked = x.every(e=>e.checked)
+                 })
+            })
+            // mainCheak.cheak
+
+            // inputData.forEach()
+      </script>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* .sub-container p{
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+     <!-- <div class="container">
+
+        <div class="sub-container">
+
+            <button>
+                click1
+            </button>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis quaerat, odit itaque accusantium eius recusandae voluptatum natus eligendi, porro cumque iste doloremque adipisci iusto sit?
+            </p>
+        </div>
+
+        <div class="sub-container">
+
+            <button>
+                click1
+            </button>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis quaerat, odit itaque accusantium eius recusandae voluptatum natus eligendi, porro cumque iste doloremque adipisci iusto sit?
+            </p>
+        </div>
+        <div class="sub-container">
+
+            <button>
+                click1
+            </button>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis quaerat, odit itaque accusantium eius recusandae voluptatum natus eligendi, porro cumque iste doloremque adipisci iusto sit?
+            </p>
+        </div>
+     </div> -->
+
+<div class="container">
+   <input type='checkbox' id="first" onchange="checkedFun()"/>
+
+   <div onclick="inputFun()">
+
+   <input type='checkbox' class="input"/>
+   <input type='checkbox' class="input"/>
+   <input type='checkbox' class="input"/>
+   <input type='checkbox' class="input"/>
+
+   </div>
+
+   
+
+</div>
+     <script>
+
+         
+         let firstInput = document.getElementById('first');
+         
+         let inputs = document.querySelectorAll('.input')
+         function checkedFun() {
+    for(let i=0; i<inputs.length; i++){
+
+        inputs[i].checked = firstInput.checked
+    }
+
+
+        } 
+
+        function inputFun(){
+                      let a = Array.from(inputs)
+                      console.log(a)
+                     firstInput.checked =  a.every((e)=>e.checked)
+                      console.log(firstInput.checked)
+  
+        }
+        
+
+        // let btn = document.querySelectorAll('button');
+
+        // let p = document.querySelectorAll('p');
+
+        // btn.forEach((e,i)=>{
+        //     e.addEventListener('click' , function(){
+        //         p[i].style.display = 'block'
+        //     })
+        // })
+     </script>
+</body>
+</html>
