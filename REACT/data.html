@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div id="container">
+       <table>
+         <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>intern</th>
+         </tr>
+         <tr class="mainData">
+            <td>prerna</td>
+            <td>21</td>
+            <td>frontend</td>
+         </tr>
+         <tr class="mainData">
+
+            <td>vini</td>
+            <td>21</td>
+            <td>frontend</td>
+         </tr>
+         <tr class="mainData">
+            <td>princi</td>
+            <td>21</td>
+            <td>frontend</td>
+         </tr>
+         <tr class="mainData">
+            <td>krupali</td>
+            <td>21</td>
+            <td>frontend</td>
+         </tr>
+         <tr class="mainData">
+            <td>dhanu</td>
+            <td>21</td>
+            <td>frontend</td>
+         </tr>
+       </table>
+     </div>
+
+     <input type="text" id="searchId" onkeyup="searchfun()">
+</body>
+
+<script>
+
+
+function searchfun(){
+    let searchId = document.getElementById('searchId').value.toLowerCase();
+
+    let mainData = document.querySelectorAll('.mainData');
+
+    mainData.forEach((e)=>{
+        let tdData = e.querySelector('td:first-child');
+        if(tdData){
+            let tdDataName = tdData.textContent.toLowerCase()
+            if(tdDataName.includes(searchId)){
+
+               e.style.display = '';
+            }
+            else{
+                e.style.display = 'none';
+
+            }
+            
+        }
+
+    }
+)
+    console.log(searchId)
+}
+
+
+</script>
+</html>
+
+
+
+

@@ -1,0 +1,222 @@
+/* $text-color: #699AB6
+$text-color-highlight: #6B8AFA
+$bg: #E8F5FC
+$button-size: 44px
+
+$normal-shadow: 6px 6px 10px rgba(darken($bg, 15%), 0.5), -6px -6px 10px rgba(lighten($bg, 50%), 0.6)
+$pressed-shadow: inset 6px 6px 10px rgba(darken($bg, 15%), 0.5), inset -6px -6px 10px rgba(lighten($bg, 50%), 0.6)
+$active-shadow: 6px 6px 10px rgba(darken($bg, 15%), 0.5), -6px -6px 10px rgba(lighten($bg, 50%), 0.6), inset 6px 6px 10px rgba(darken($bg, 15%), 0.5), inset -6px -6px 10px rgba(lighten($bg, 50%), 0.6)
+
+body
+   display: flex
+   justify-content: center
+   align-items: center
+   min-height: 100vh
+   background-color: $bg
+   padding: 1rem
+   color: $text-color
+   
+.calculator
+   padding: 32px 24px
+   width: 240px
+   background-color: $bg
+   box-shadow: $normal-shadow
+   border-radius: 16px
+   &__screen
+      text-align: right
+      padding: 12px 8px
+      font-family: monospace
+      border-radius: 6px
+      background-color: darken($bg, 1%)
+      box-shadow: $pressed-shadow
+      margin-bottom: 24px
+   &__operation
+      margin: 0 0 8px 0
+      font-weight: 500
+      font-size: 16px
+      letter-spacing: 2px
+   &__result
+      font-size: 24px
+      margin: 0
+      font-weight: 600
+      color: $text-color-highlight
+      letter-spacing: 2px
+   &__buttons
+      display: grid
+      grid-gap: 16px 12px
+      grid-template-columns: repeat(4, $button-size)
+      grid-template-rows: repeat(5, $button-size)
+      justify-content: center
+      .btn
+         background-color: $bg
+         box-shadow: $normal-shadow
+         border: none
+         border-radius: 100%
+         cursor: pointer
+         user-select: none
+         outline: none
+         color: $text-color
+         font-weight: 500
+         &:hover
+            background-color: darken($bg, 2%)
+         &:active:focus
+            box-shadow: $pressed-shadow
+         &:focus
+            box-shadow: $active-shadow
+         &.equal
+            background-color: $text-color-highlight
+            color: white
+            box-shadow: 3px 11px 25px rgba(darken($text-color-highlight, 12%), 0.6), -6px -6px 10px rgba(255, 255, 255, 0.6), inset -3px -3px 14px rgba(255, 255, 255, 0.2), inset 8px 8px 14px rgba(darken($text-color-highlight, 12%), 0.5)
+            grid-row-start: span 2
+            grid-column-start: 4
+            border-radius: 50px
+            &:hover
+               background-color: darken($text-color-highlight, 5%)
+            &:active:focus, &:focus
+               box-shadow: 3px 11px 25px rgba(darken($text-color-highlight, 20%), 0.6), -6px -6px 10px rgba(lighten($text-color-highlight, 30%), 0.9), inset 3px 11px 15px rgba(darken($text-color-highlight, 20%), 0.5), inset -6px -6px 8px rgba(lighten($text-color-highlight, 20%), 0.5)
+         &.highlight
+            color: $text-color-highlight */
+
+
+
+ /* body{
+
+ display: flex;
+ justify-content : center;
+ align-items: center;
+ min-height: 100vh;
+ background-color: #E8F5FC;
+ padding: 1rem;
+ color:  #699AB6           
+}
+
+.calculator{
+
+    padding: 32px 24px;
+    width: 240px;
+    background-color: #E8F5FC;
+    box-shadow: 6px 6px 10px rgba(darken(#E8F5FC, 15%), 0.5), -6px -6px 10px rgba(lighten(#E8F5FC, 50%), 0.6);
+    border-radius: 16px;
+}
+.calculator__screen{
+    text-align: right;
+    padding: 12px 8px;
+    font-family: monospace;
+    border-radius: 6px;
+    background-color: darken(#E8F5FC, 1%);
+    box-shadow:  inset 6px 6px 10px rgba(darken(#E8F5FC, 15%), 0.5), inset -6px -6px 10px rgba(lighten(#E8F5FC, 50%), 0.6);
+    margin-bottom: 24px;
+} */
+
+body{
+
+    display: flex;
+    justify-content : center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #E8F5FC;
+    padding: 1rem;
+    color:  #699AB6           
+   }
+   .calculator{
+
+    padding: 32px 24px;
+    width: 240px;
+    background-color: #E8F5FC;
+    box-shadow: 6px 6px 10px rgba(102, 184, 217, 0.5), -6px -6px 10px rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+}   
+
+.calculator__screen{
+    background-color: hsl(200, 76%, 95% , 1%);
+    text-align: right;
+    padding: 12px 8px;
+    font-family: monospace;
+    border-radius: 6px;
+    box-shadow: 
+    inset 6px 6px 10px rgba(158, 205, 231, 0.5), 
+    inset -6px -6px 10px rgba(255, 255, 255, 0.6);
+    margin-bottom: 24px
+}
+
+
+.calculator__operation{
+
+    margin: 0 0 8px 0;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 2px
+}
+
+.calculator__result{
+
+    font-size: 24px;
+    margin: 0;
+    font-weight: 600;
+    color: #6B8AFA;
+    letter-spacing: 2px;
+}
+
+.calculator__buttons{
+
+    display: grid;
+    grid-gap: 16px 12px;
+    grid-template-columns: repeat(4, 44px);
+    grid-template-rows: repeat(5, 44px);
+    justify-content: center;
+}
+
+
+.calculator__buttons .btn{
+    background-color: #E8F5FC;
+    box-shadow: 6px 6px 10px rgba(102, 184, 217, 0.5), -6px -6px 10px rgba(255, 255, 255, 0.6);
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    color: #699AB6;
+    font-weight: 500
+}
+.calculator__buttons .btn:hover{
+    background-color: hsl(200, 76%, 95% , 2%);
+
+}
+.calculator__buttons .btn:active:focus{
+
+    box-shadow: 
+    inset 6px 6px 10px rgba(158, 205, 231, 0.5), 
+    inset -6px -6px 10px rgba(255, 255, 255, 0.6);
+ }
+.calculator__buttons .btn:focus{
+
+    box-shadow: 
+    6px 6px 10px rgba(158, 205, 231, 0.5),  /* darkened color with 50% opacity */
+    -6px -6px 10px rgba(255, 255, 255, 0.6), /* lightened color (white) with 60% opacity */
+    inset 6px 6px 10px rgba(158, 205, 231, 0.5), 
+    inset -6px -6px 10px rgba(255, 255, 255, 0.6);
+}
+
+.calculator__buttons .equal{
+    background-color: #6B8AFA;
+    color: white;
+    grid-row-start: span 2;
+    grid-column-start: 4;
+    border-radius: 50px;
+    box-shadow: 
+    3px 11px 25px rgba(78, 108, 200, 0.6),  
+    -6px -6px 10px rgba(255, 255, 255, 0.6), 
+    inset -3px -3px 14px rgba(255, 255, 255, 0.2),
+    inset 8px 8px 14px rgba(78, 108, 200, 0.5);
+} 
+
+
+
+.calculator__buttons .equal:hover{
+    background-color: #6B8AFA;
+     /* darken($text-color-highlight, 5%) */
+}
+
+.calculator__buttons .highlight{
+    color: #6B8AFA;
+}

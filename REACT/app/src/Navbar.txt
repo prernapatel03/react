@@ -1,0 +1,27 @@
+import React, { useState } from "react";
+import { Link, Outlet } from "react-router-dom";
+
+export default function Navbar() {
+//   function handleClick() {
+//     if (theme) {
+//       setTheme(false);
+//     } else {
+//       setTheme(true);
+//     }
+//   }
+  return (
+    <div>
+      <ul>
+       
+        <li>
+          <Link to="/">login</Link>
+        </li>
+        <li>
+          <Link to="/register">Data</Link>
+        </li>
+        
+      </ul>
+      <Outlet />
+    </div>
+  );
+}

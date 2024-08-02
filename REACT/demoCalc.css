@@ -1,0 +1,134 @@
+
+:root{
+     --white : #e8f5fc;
+    --blue : #6B8AFA;
+    --teal :  #699ab6; 
+    --blueshadow : rgba(255, 255, 255, 0.6);
+    --sideshadow : rgba(102, 184, 217, 0.5);
+    --blackshadow :  hsl(200, 76%, 95% , 1%);
+    --btnshadow : rgba(102, 184, 217, 0.5)
+    
+
+
+
+    /* --white : #212529;
+    --blue : #dcdee3;
+    --teal :  #ffffff;
+    --blueshadow : rgba(219, 214, 214, 0.6);
+    --sideshadow : rgba(197, 202, 204, 0.5);
+    --blackshadow :  hsla(210, 1%, 70%, 0.01);
+    --btnshadow : rgba(102, 184, 217, 0.5) */
+
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background-color: #e8f5fc; */
+  background-color: var(--white);
+  padding: 1rem;
+  color: var(--teal)
+}
+.container {
+    /* background-color: rgb(16, 16, 74); */
+    background-color: var(--white);
+  box-shadow: 6px 6px 10px var(--sideshadow), -6px -6px 10px var(--blueshadow);
+  padding: 32px 54px;
+  width: 240px;
+  border-radius: 16px;
+}
+.container .screen{
+     text-align: right;
+     padding: 32px 8px;
+     font-family: monospace;
+     border-radius: 6px;
+     background-color: var(--blackshadow);
+     margin-bottom: 44px;
+     box-shadow: 
+     inset 6px 6px 10px rgba(158, 205, 231, 0.5), 
+     inset -6px -6px 10px var(--blueshadow);
+}
+.container .show_input{
+    margin: 0 0 0px 0;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border: none;
+    outline: none;
+    background-color: var(--blackshadow);
+
+}
+
+::placeholder{
+    text-align: right;
+    color: var(--teal)
+}
+.container .show_result{
+    font-size: 24px;
+    margin : 0;
+    font-weight:600;
+    color : var(--blue);
+    letter-spacing: 2px;
+}
+
+
+.container .buttons{
+    display: grid;
+    grid-template-columns: repeat(4 , 54px);
+    grid-template-rows: repeat(5, 54px);
+    grid-gap: 16px 12px;
+    justify-content: center;
+
+}
+.buttons .btn{ 
+    background-color: var(--white);
+    box-shadow: 6px 6px 10px rgba(25, 25, 25, 0.2), -6px -6px 10px var(--blueshadow);
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    color: var(--teal);
+    font-weight: 700;
+    font-size: 20px;
+}
+.buttons .btn:hover{
+    background-color: hsla(180, 1%, 31%, 0.1);
+
+}
+.buttons .btn:active:focus{
+
+    box-shadow: 
+    inset 6px 6px 10px rgba(158, 205, 231, 0.5), 
+    inset -6px -6px 10px var(--blueshadow);
+ }
+.buttons .btn:focus{
+
+    box-shadow: 
+    6px 6px 10px rgba(158, 205, 231, 0.5),  /* darkened color with 50% opacity */
+    -6px -6px 10px rgba(255, 255, 255, 0.6), /* lightened color (white) with 60% opacity */
+    inset 6px 6px 10px rgba(158, 205, 231, 0.5), 
+    inset -6px -6px 10px var(--blueshadow);
+}
+.buttons .equal{
+    background-color : var(--blue);
+    color: var(--white);
+    grid-row-start: span 2;
+    border-radius: 50px;
+    box-shadow: 
+    3px 11px 25px rgba(78, 108, 200, 0.6),  
+    -6px -6px 10px var(--blueshadow), 
+    inset -3px -3px 14px rgba(255, 255, 255, 0.2),
+    inset 8px 8px 14px rgba(78, 108, 200, 0.5);
+} 
+
+
+
+.buttons .equal:hover{
+    background-color : var(--blue);
+}
+.buttons .highlight{
+    color : var(--blue);
+}
